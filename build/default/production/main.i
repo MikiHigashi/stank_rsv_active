@@ -7486,9 +7486,10 @@ typedef union tagPWM4 {
 
 
 
+
+
+uint16_t pwm0[4] = {0,0,0,0};
 PWM4 data;
-
-
 
 
 
@@ -7496,7 +7497,9 @@ PWM4 data;
 void get_strb(void) {
     uint8_t b, d;
 
-    while (PORTAbits.RA5 == 0) {}
+    while (PORTAbits.RA5 == 0) {
+        __asm("clrwdt");
+    }
 
     for (uint8_t idx=0; idx<8; idx++) {
         d = 0;
@@ -7512,17 +7515,36 @@ void get_strb(void) {
 }
 
 
-void main(void)
-{
-    SYSTEM_Initialize();
 
+void set_pwm(void) {
+    uint8_t i;
+    uint16_t d;
+    uint16_t d0;
 
+    for (i=0; i<4; i++) {
+        d = data.pwm[i];
+        if (d < 4000) return;
+        if (d > 20000) return;
+        d0 = pwm0[i];
+        if (d0) {
+            if (d0 > d) {
+                if ((d0 - d) > 200) {
+                    d = d0 - 200;
+                }
+            }
+            if (d0 < d) {
+                if ((d - d0) > 200) {
+                    d = d0 + 200;
+                }
+            }
+        }
+        pwm0[i] = d;
+    }
 
-
-    PWM1_DutyCycleSet(12000);
-    PWM2_DutyCycleSet(12000);
-    PWM3_DutyCycleSet(12000);
-    PWM4_DutyCycleSet(12000);
+    PWM1_DutyCycleSet(pwm0[0]);
+    PWM2_DutyCycleSet(pwm0[1]);
+    PWM3_DutyCycleSet(pwm0[2]);
+    PWM4_DutyCycleSet(pwm0[3]);
     PWM1_LoadBufferSet();
     PWM2_LoadBufferSet();
     PWM3_LoadBufferSet();
@@ -7531,24 +7553,14 @@ void main(void)
     PWM2_Start();
     PWM3_Start();
     PWM4_Start();
+}
 
+
+void main(void)
+{
+    SYSTEM_Initialize();
     while (1) {
         get_strb();
-
-        PWM1_DutyCycleSet(data.pwm[0]);
-        PWM2_DutyCycleSet(data.pwm[1]);
-        PWM3_DutyCycleSet(data.pwm[2]);
-        PWM4_DutyCycleSet(data.pwm[3]);
-        PWM1_LoadBufferSet();
-        PWM2_LoadBufferSet();
-        PWM3_LoadBufferSet();
-        PWM4_LoadBufferSet();
-
-
-
-
-
-
-
+        set_pwm();
     }
 }

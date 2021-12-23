@@ -126,12 +126,12 @@
          <value>cleared</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM3" registerAlias="PWMOFTCON" settingAlias="OFTSEL" alias="OF3_match"/>
-         <value>2</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM1" registerAlias="PWMINTF" settingAlias="OFIF"/>
          <value>cleared</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM3" registerAlias="PWMOFTCON" settingAlias="OFTSEL" alias="OF3_match"/>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RC0PPS"/>
@@ -370,12 +370,12 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMLDCON" settingAlias="LDSRC" alias="LD3_trigger"/>
-         <value>2</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM2" registerAlias="PWMCLKCON" settingAlias="CLKSEL" alias="FOSC"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMLDCON" settingAlias="LDSRC" alias="LD3_trigger"/>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMLDCON" settingAlias="LDMOD" alias="enabled"/>
@@ -534,11 +534,11 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMINTF" settingAlias="PHIF" alias="set"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM2" registerAlias="PWMCON" settingAlias="PWMPOL" alias="active_lo"/>
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM2" registerAlias="PWMCON" settingAlias="PWMPOL" alias="active_lo"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMINTF" settingAlias="PHIF" alias="set"/>
          <value>1</value>
       </entry>
       <entry>
@@ -1010,12 +1010,12 @@
          <value>255</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM4" registerAlias="PWMPRH"/>
-         <value>255</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM1" registerAlias="PWMCLKCON" settingAlias="PRESC" alias="No_Prescalar"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM4" registerAlias="PWMPRH"/>
+         <value>255</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RC1PPS"/>
@@ -1246,11 +1246,11 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMLDCON" settingAlias="LDSRC" alias="LD2_trigger"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM2" registerAlias="PWMINTF" settingAlias="PHIF" alias="set"/>
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM2" registerAlias="PWMINTF" settingAlias="PHIF" alias="set"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMLDCON" settingAlias="LDSRC" alias="LD2_trigger"/>
          <value>1</value>
       </entry>
       <entry>
@@ -1411,7 +1411,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG1" settingAlias="WDTE"/>
-         <value>OFF</value>
+         <value>ON</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMOFTCON" settingAlias="OFTOUTMC" alias="match_decrementing"/>
@@ -1566,12 +1566,12 @@
          <value/>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM3" registerAlias="PWMINTE" settingAlias="PHIE" alias="enabled"/>
-         <value>1</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM2" name="PhaseCount"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM3" registerAlias="PWMINTE" settingAlias="PHIE" alias="enabled"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM3" registerAlias="PWMCLKCON" settingAlias="PRESC" alias="No_Prescalar"/>
@@ -1690,11 +1690,11 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM3" registerAlias="PWMPHL"/>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM1" registerAlias="PWMTMRL"/>
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM1" registerAlias="PWMTMRL"/>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM3" registerAlias="PWMPHL"/>
          <value>0</value>
       </entry>
       <entry>
@@ -1727,23 +1727,23 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="WDT" registerAlias="WDTCON0" settingAlias="WDTPS"/>
-         <value>1:65536</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMCLKCON" settingAlias="PRESC" alias="Divide_clock_src_by_32"/>
-         <value>5</value>
+         <value>1:256</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM1" registerAlias="PWMOFTCON" settingAlias="OFTMOD" alias="one_shot_slave_run"/>
          <value>2</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMOFTCON" settingAlias="OFTMOD" alias="continuous_slave_run"/>
-         <value>3</value>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMCLKCON" settingAlias="PRESC" alias="Divide_clock_src_by_32"/>
+         <value>5</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM2" name="dutyCycleInPer"/>
          <value>18</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMOFTCON" settingAlias="OFTMOD" alias="continuous_slave_run"/>
+         <value>3</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM4" registerAlias="PWMLDCON" settingAlias="LDSRC"/>
@@ -1758,12 +1758,12 @@
          <value>LD1_trigger</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM3" name="intermoduleEnable"/>
-         <value>enabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM1" registerAlias="PWMLDCON" settingAlias="LDSRC"/>
          <value>LD1_trigger</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM3" name="intermoduleEnable"/>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM3" registerAlias="PWMCON" settingAlias="PWMMODE" alias="toggle_on_match"/>
@@ -1771,7 +1771,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="WDT" name="wdtPeriod"/>
-         <value>2.11406</value>
+         <value>0.00826</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM2" registerAlias="PWMOFTCON" settingAlias="OFTOUTMC"/>
@@ -1795,7 +1795,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="WDT" registerAlias="WDTCON0"/>
-         <value>22</value>
+         <value>6</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="LATC"/>
@@ -1862,12 +1862,12 @@
          <value>32</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM3" registerAlias="PWMCLKCON"/>
-         <value>32</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM2" registerAlias="PWMCLKCON" settingAlias="PRESC" alias="Divide_clock_src_by_2"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM3" registerAlias="PWMCLKCON"/>
+         <value>32</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM4" registerAlias="PWMCLKCON"/>
@@ -1898,12 +1898,12 @@
          <value>3</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM3" registerAlias="PWMINTF" settingAlias="PHIF" alias="cleared"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM1" registerAlias="PWMCLKCON" settingAlias="PRESC" alias="Divide_clock_src_by_16"/>
          <value>4</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM3" registerAlias="PWMINTF" settingAlias="PHIF" alias="cleared"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCAN" settingAlias="IOCAN0"/>
@@ -2578,20 +2578,20 @@
          <value>8192</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM3" name="clockFreq"/>
-         <value>32000000</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM4" registerAlias="PWMI" settingAlias="order"/>
-         <value>3</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM2" registerAlias="PWMPRH" settingAlias="PWMPRH"/>
          <value>255</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM2" registerAlias="PWMCLKCON" settingAlias="PRESC" alias="Divide_clock_src_by_64"/>
          <value>6</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM3" name="clockFreq"/>
+         <value>32000000</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM4" registerAlias="PWMI" settingAlias="order"/>
+         <value>3</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCI" settingAlias="order"/>
@@ -2618,12 +2618,12 @@
          <value>enabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM4" name="maxOffset"/>
-         <value>0.008192</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM1" registerAlias="PWMI" settingAlias="order"/>
          <value>4</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM4" name="maxOffset"/>
+         <value>0.008192</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRA2"/>
@@ -3159,7 +3159,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="System Module" registerAlias="CONFIG1"/>
-         <value>3744</value>
+         <value>3768</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM1" registerAlias="PWMOFTCON" settingAlias="OFTSEL"/>
@@ -3198,12 +3198,12 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM3" registerAlias="PWMOFTCON" settingAlias="OFTSEL"/>
-         <value>OF1_match</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM1" registerAlias="PWMCON" settingAlias="PWMEN" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM3" registerAlias="PWMOFTCON" settingAlias="OFTSEL"/>
+         <value>OF1_match</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Pin Module_IOCIISRFunction"/>
@@ -3370,20 +3370,20 @@
          <value>255</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM4" registerAlias="PWMPRL"/>
-         <value>255</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM2" registerAlias="PWMOFTCON" settingAlias="OFTMOD" alias="one_shot_slave_run"/>
          <value>2</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMCON" settingAlias="PWMEN" alias="enabled"/>
-         <value>1</value>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM4" registerAlias="PWMPRL"/>
+         <value>255</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM1" registerAlias="PWMINTE" settingAlias="PHIE" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMCON" settingAlias="PWMEN" alias="enabled"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ODCONA" settingAlias="ODA5"/>
@@ -4222,11 +4222,11 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM3" registerAlias="PWMCON" settingAlias="PWMMODE" alias="set_on_match"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM2" registerAlias="PWMOFTCON" settingAlias="OFTMOD" alias="independent_slave_run"/>
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM2" registerAlias="PWMOFTCON" settingAlias="OFTMOD" alias="independent_slave_run"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM3" registerAlias="PWMCON" settingAlias="PWMMODE" alias="set_on_match"/>
          <value>1</value>
       </entry>
       <entry>
@@ -4334,12 +4334,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMINTE" settingAlias="PHIE" alias="disabled"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM2" name="PWM2_PWMIISRFunction"/>
          <value>ISR</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PWM4" registerAlias="PWMINTE" settingAlias="PHIE" alias="disabled"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RC5PPS" settingAlias="RC5PPS"/>
@@ -4433,7 +4433,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\device_config.c</file>
-         <hash>93ddab8732de9568ba46c5e2178cde46c03901ef70a3b3c285d6aa22b05bceb7</hash>
+         <hash>2046c5270ddaf67f5a657af19d72e86cef75535a2365828331f642a606584562</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.h</file>
@@ -4465,7 +4465,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.c</file>
-         <hash>16992da89ced9f5c5f5d18b44c08e193b9eb442d78024f0d3fe4f60d802b1492</hash>
+         <hash>bd651b5abe686f8afe1e09a5935c519a7eda309195a1c83bb15a2e5a52f2a3d3</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pwm2.c</file>

@@ -11,9 +11,11 @@
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "50 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\lcd_i2c.c
 [v _LCD_i2C_cmd LCD_i2C_cmd `(v  1 e 1 0 ]
-"22 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\main.c
+"23 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\main.c
 [v _get_strb get_strb `(v  1 e 1 0 ]
-"41
+"45
+[v _set_pwm set_pwm `(v  1 e 1 0 ]
+"85
 [v _main main `(v  1 e 1 0 ]
 "52 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -94,7 +96,7 @@
 "444
 [u S805 . 1 `S798 1 . 1 0 ]
 [v _PORTAbits PORTAbits `VES805  1 e 1 @12 ]
-[s S940 . 1 `uc 1 RC0 1 0 :1:0 
+[s S946 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -102,13 +104,13 @@
 `uc 1 RC5 1 0 :1:5 
 ]
 "494
-[u S947 . 1 `S940 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES947  1 e 1 @14 ]
+[u S953 . 1 `S946 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES953  1 e 1 @14 ]
 "973
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1023
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S921 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S927 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -116,8 +118,8 @@
 `uc 1 TRISC5 1 0 :1:5 
 ]
 "1038
-[u S928 . 1 `S921 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES928  1 e 1 @142 ]
+[u S934 . 1 `S927 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES934  1 e 1 @142 ]
 [s S698 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
@@ -145,7 +147,7 @@
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "1870
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S904 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S910 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -153,8 +155,8 @@
 `uc 1 LATC5 1 0 :1:5 
 ]
 "1885
-[u S911 . 1 `S904 1 . 1 0 ]
-[v _LATCbits LATCbits `VES911  1 e 1 @270 ]
+[u S917 . 1 `S910 1 . 1 0 ]
+[v _LATCbits LATCbits `VES917  1 e 1 @270 ]
 "2204
 [v _BORCON BORCON `VEuc  1 e 1 @278 ]
 "2420
@@ -467,63 +469,26 @@
 [v _RC0PPS RC0PPS `VEuc  1 e 1 @3744 ]
 "12066
 [v _PLLR PLLR `VEb  1 e 0 @1238 ]
+"17 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\main.c
+[v _pwm0 pwm0 `[4]us  1 e 8 0 ]
 [u S795 tagPWM4 8 `[4]us 1 pwm 8 0 `[8]uc 1 buf 8 0 ]
-"15 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\main.c
+"18
 [v _data data `S795  1 e 8 0 ]
-"41
+"85
 [v _main main `(v  1 e 1 0 ]
 {
-"80
+"92
 } 0
-"22
-[v _get_strb get_strb `(v  1 e 1 0 ]
+"45
+[v _set_pwm set_pwm `(v  1 e 1 0 ]
 {
-"27
-[v get_strb@idx idx `uc  1 a 1 4 ]
-"23
-[v get_strb@b b `uc  1 a 1 3 ]
-[v get_strb@d d `uc  1 a 1 2 ]
-"38
-} 0
-"50 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/mcc.c
-[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-{
-"60
-} 0
-"76
-[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-{
-"80
-} 0
-"58 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/pwm4.c
-[v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
-{
-"110
-} 0
-"58 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/pwm3.c
-[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
-{
-"110
-} 0
-"58 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/pwm2.c
-[v _PWM2_Initialize PWM2_Initialize `(v  1 e 1 0 ]
-{
-"110
-} 0
-"58 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/pwm1.c
-[v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
-{
-"110
-} 0
-"57 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/pin_manager.c
-[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-{
-"107
-} 0
-"62 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/mcc.c
-[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-{
-"74
+"47
+[v set_pwm@d d `us  1 a 2 9 ]
+"48
+[v set_pwm@d0 d0 `us  1 a 2 7 ]
+"46
+[v set_pwm@i i `uc  1 a 1 6 ]
+"82
 } 0
 "113 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/pwm4.c
 [v _PWM4_Start PWM4_Start `(v  1 e 1 0 ]
@@ -588,6 +553,56 @@
 {
 [v PWM1_DutyCycleSet@dutyCycleCount dutyCycleCount `us  1 p 2 0 ]
 "143
+} 0
+"23 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\main.c
+[v _get_strb get_strb `(v  1 e 1 0 ]
+{
+"30
+[v get_strb@idx idx `uc  1 a 1 4 ]
+"24
+[v get_strb@b b `uc  1 a 1 3 ]
+[v get_strb@d d `uc  1 a 1 2 ]
+"41
+} 0
+"50 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"60
+} 0
+"76
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"80
+} 0
+"58 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/pwm4.c
+[v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
+{
+"110
+} 0
+"58 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/pwm3.c
+[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
+{
+"110
+} 0
+"58 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/pwm2.c
+[v _PWM2_Initialize PWM2_Initialize `(v  1 e 1 0 ]
+{
+"110
+} 0
+"58 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/pwm1.c
+[v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
+{
+"110
+} 0
+"57 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"107
+} 0
+"62 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"74
 } 0
 "52 Z:\S-TANK\‘«‰ñ‚è\stank_rsv_active2.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]

@@ -12,9 +12,10 @@ typedef union tagPWM4 {
 
 
 #define SPI_BYTES 8 /* SPI受信するデーターのバイト数 */
-PWM4 data; // SPI受信格納先
+#define MAX_DIFF 200 /* 最大変化量 */
 
-//char buf[32];
+uint16_t pwm0[4] = {0,0,0,0}; // PWM 旧値
+PWM4 data; // SPI受信格納先
 
 
 // なぜか、PIC16F1575 は、GPIO割り込みが効かないので、ポーリング受信する。
@@ -22,7 +23,9 @@ PWM4 data; // SPI受信格納先
 void get_strb(void) {
     uint8_t b, d; //, *dp = data.buf;
 
-    while (SPI_STRB_PORT == 0) {} // STRB立ち上がりをソフトループで待つ
+    while (SPI_STRB_PORT == 0) {
+        CLRWDT();
+    } // STRB立ち上がりをソフトループで待つ
     
     for (uint8_t idx=0; idx<SPI_BYTES; idx++) {
         d = 0;
@@ -38,17 +41,36 @@ void get_strb(void) {
 }
 
 
-void main(void)
-{
-    SYSTEM_Initialize();
 
-//    __delay_ms(100); // I2C 初期化待ち    
-//    LCD_i2c_init(8);
-    
-    PWM1_DutyCycleSet(12000);
-    PWM2_DutyCycleSet(12000);
-    PWM3_DutyCycleSet(12000);
-    PWM4_DutyCycleSet(12000);
+void set_pwm(void) {
+    uint8_t i;
+    uint16_t d;
+    uint16_t d0;
+
+    for (i=0; i<4; i++) {
+        d = data.pwm[i];
+        if (d < 4000) return;
+        if (d > 20000) return;
+        d0 = pwm0[i];
+        if (d0) {
+            if (d0 > d) {
+                if ((d0 - d) > MAX_DIFF) {
+                    d = d0 - MAX_DIFF;
+                }
+            }
+            if (d0 < d) {
+                if ((d - d0) > MAX_DIFF) {
+                    d = d0 + MAX_DIFF;
+                }
+            }
+        }
+        pwm0[i] = d;
+    }
+
+    PWM1_DutyCycleSet(pwm0[0]);
+    PWM2_DutyCycleSet(pwm0[1]);
+    PWM3_DutyCycleSet(pwm0[2]);
+    PWM4_DutyCycleSet(pwm0[3]);
     PWM1_LoadBufferSet();
     PWM2_LoadBufferSet();
     PWM3_LoadBufferSet();
@@ -57,25 +79,15 @@ void main(void)
     PWM2_Start();
     PWM3_Start();
     PWM4_Start();
-    
+}
+
+
+void main(void)
+{
+    SYSTEM_Initialize();
     while (1) {
         get_strb();
-
-        PWM1_DutyCycleSet(data.pwm[0]);
-        PWM2_DutyCycleSet(data.pwm[1]);
-        PWM3_DutyCycleSet(data.pwm[2]);
-        PWM4_DutyCycleSet(data.pwm[3]);
-        PWM1_LoadBufferSet();
-        PWM2_LoadBufferSet();
-        PWM3_LoadBufferSet();
-        PWM4_LoadBufferSet();
-        
-//        LCD_i2C_cmd(0x80);
-//        sprintf(buf, "A%05d B%05d", data.pwm[0], data.pwm[1]);
-//        LCD_i2C_data(buf);
-//        LCD_i2C_cmd(0xC0);
-//        sprintf(buf, "C%05d D%05d", data.pwm[2], data.pwm[3]);
-//        LCD_i2C_data(buf);
+        set_pwm();
     }
 }
 /**
